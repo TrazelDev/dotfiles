@@ -1,0 +1,10 @@
+[terminal.shell]
+program = "C:\\Windows\\System32\\wsl.exe"
+args = ["~"]
+
+[font]
+size = 13.0
+normal = { family = "FiraCode Nerd Font", style = "Regular" }
+
+[window]
+startup_mode = "Fullscreen"
