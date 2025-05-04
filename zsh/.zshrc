@@ -43,7 +43,7 @@ zle -N zle-line-finish
 
 
 # Making it so it will show what dir you are in:
-PROMPT='%F{green}%~ %f$ '
+PROMPT='%F{blue}%~ %f$ '
 
 # sourceing things:
 export TERM="xterm-256color"
