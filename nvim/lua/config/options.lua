@@ -10,3 +10,6 @@ vim.opt.softtabstop = 4     -- how many spaces a tab feels like when editing
 
 -- Line for how long can your code get:
 vim.opt.colorcolumn = "80"
+
+-- Make sure that you do not type on your last line but it stops 8 lines above:
+vim.opt.scrolloff = 8
