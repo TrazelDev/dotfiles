@@ -39,18 +39,20 @@ function zle-line-finish {
 zle -N zle-line-finish
 # -----------------------------------------------------------------------------
 
-
-
-
 # Making it so it will show what dir you are in:
 PROMPT='%F{blue}%~ %f$ '
 
-# sourceing things:
+# Colors:
 export TERM="xterm-256color"
 export COLORTERM=truecolor
 
-# aliases:
+# Editor:
+export EDITOR='nvim'
+export VISUAL='nvim'
+
+# Aliases:
 alias ll="ls -al"
 alias python="python3"
 alias rcat="/bin/cat"
 alias cat='batcat'
+alias vim='nvim'
