@@ -56,3 +56,4 @@ alias python="python3"
 alias rcat="/bin/cat"
 alias cat='batcat'
 alias vim='nvim'
+eval "$(zoxide init --cmd cd zsh)"
