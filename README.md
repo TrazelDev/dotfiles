@@ -15,7 +15,6 @@ leftalt = leftcontrol
 capslock = escape
 
 # Remapping the copilot key to backspace:
-f23 = backspace
 leftshift+leftmeta = backspace
 ```
 then run: `sudo systemctl restart keyd`
