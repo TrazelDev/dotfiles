@@ -59,3 +59,7 @@ alias rcat="/bin/cat"
 alias cat='batcat'
 alias vim='nvim'
 eval "$(zoxide init --cmd cd zsh)"
+
+
+# Path:
+export PATH=$PATH:~/snap
