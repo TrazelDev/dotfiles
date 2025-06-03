@@ -13,7 +13,10 @@ Open the file `/etc/keyd/default.conf` and paste the following:
 [main]
 leftalt = leftcontrol
 capslock = escape
-f23 = backspace # Remapping the copilot key to backspace
+
+# Remapping the copilot key to backspace:
+f23 = backspace
+leftshift+leftmeta = backspace
 ```
 then run: `sudo systemctl restart keyd`
 
