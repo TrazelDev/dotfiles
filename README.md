@@ -16,3 +16,8 @@ capslock = escape
 f23 = backspace # Remapping the copilot key to backspace
 ```
 then run: `sudo systemctl restart keyd`
+
+## GTK theme:
+Install: `nwg-look` & `atppuccin-gtk-theme-moch`.
+
+Then run nwg-look and select the theme you want.
