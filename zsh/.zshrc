@@ -56,7 +56,7 @@ export VISUAL='nvim'
 alias ll="ls -al"
 alias python="python3"
 alias rcat="/bin/cat"
-alias cat='batcat'
+alias cat='bat'
 alias vim='nvim'
 alias qemu='qemu-system-x86_64'
 eval "$(zoxide init --cmd cd zsh)"
