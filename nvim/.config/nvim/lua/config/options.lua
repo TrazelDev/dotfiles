@@ -10,6 +10,16 @@ vim.opt.softtabstop = 4 -- how many spaces a tab feels like when editing
 vim.opt.autoindent = true -- Automatically indent new lines
 vim.opt.smartindent = true -- Smart indentation for C-like languages (optional, but good)
 
+vim.opt.list = true
+vim.opt.listchars = {
+  tab = "» ", -- show tabs as » followed by a space
+  trail = "·", -- show trailing spaces as ·
+  extends = ">", -- show when line extends beyond the screen
+  precedes = "<", -- show when line starts before the screen
+  nbsp = "␣", -- show non-breaking space
+  space = "·", -- OPTIONAL: show regular spaces (can be noisy)
+}
+
 -- Line for how long can your code get:
 vim.opt.colorcolumn = "80"
 
