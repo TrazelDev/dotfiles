@@ -1,0 +1,17 @@
+[Unit]
+Description=Battery Warning Service
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=%h/.config/battery_warn.sh
+
+# If using Wayland (Hyprland), you might need these:
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/%U/bus
+Environment=XDG_RUNTIME_DIR=/run/user/%U
+# Depending on your setup, you might also need:
+# Environment=WAYLAND_DISPLAY=wayland-0
+# Environment=DISPLAY=:0
+# If your notifications don't show up, try uncommenting and experimenting with these.
+
+[Install]
+WantedBy=graphical-session.target

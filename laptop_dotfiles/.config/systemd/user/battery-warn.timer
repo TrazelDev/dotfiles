@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Battery Warning Script
+Requires=battery-warn.service
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=2min # Run every 2 minutes after the service becomes active
+Unit=battery-warn.service
+
+[Install]
+WantedBy=timers.target
