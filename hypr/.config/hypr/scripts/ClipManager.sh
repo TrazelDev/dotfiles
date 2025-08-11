@@ -3,7 +3,6 @@
 # Clipboard Manager. This script uses cliphist, rofi, and wl-copy.
 
 # Variables
-rofi_theme="$HOME/.config/rofi/config-clipboard.rasi"
 msg='👀 **note**  CTRL DEL = cliphist del (entry)   or   ALT DEL - cliphist wipe (all)'
 # Actions:
 # CTRL Del to delete an entry
@@ -19,8 +18,7 @@ while true; do
 		rofi -i -dmenu \
 			-kb-custom-1 "Control-Delete" \
 			-kb-custom-2 "Alt-Delete" \
-			-config $rofi_theme \
-			-mesg "$msg" < <(cliphist list)
+			< <(cliphist list)
 	)
 
 	case "$?" in
