@@ -52,6 +52,13 @@ export COLORTERM=truecolor
 export EDITOR='nvim'
 export VISUAL='nvim'
 
+# Plugins:
+source $HOME/.antidote/antidote.zsh
+antidote load
+# To load the commands with the same start
+bindkey "^K" history-substring-search-up
+bindkey "^J" history-substring-search-down
+
 # Aliases:
 alias ll="ls -al"
 alias python="python3"
