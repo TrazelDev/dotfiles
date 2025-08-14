@@ -60,7 +60,9 @@ bindkey "^K" history-substring-search-up
 bindkey "^J" history-substring-search-down
 
 # Aliases:
-alias ll="ls -al"
+alias ls="exa"
+alias ll="exa -alh"
+alias tree="exa --tree"
 alias python="python3"
 alias rcat="/bin/cat"
 alias cat='bat'
