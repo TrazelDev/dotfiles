@@ -69,6 +69,7 @@ alias cat='bat'
 alias vim='nvim'
 alias qemu='qemu-system-x86_64'
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(fzf --zsh)"
 
 
 # Path:
