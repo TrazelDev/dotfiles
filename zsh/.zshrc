@@ -41,8 +41,21 @@ function zle-line-finish {
 zle -N zle-line-finish
 # -----------------------------------------------------------------------------
 
-# Making it so it will show what dir you are in:
-PROMPT='%F{blue}%~ %f$ '
+function git_branch_name()
+{
+  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  if [[ $branch == "" ]];
+  then
+    :
+  else
+    echo '%F{yellow}<'$branch'>%f '
+  fi
+}
+# Enable substitution in the prompt.
+setopt prompt_subst
+
+PROMPT='%F{blue}%~%f $(git_branch_name)$ '
+
 
 # Colors:
 export TERM="xterm-256color"
@@ -55,7 +68,8 @@ export VISUAL='nvim'
 # Plugins:
 source $HOME/.antidote/antidote.zsh
 antidote load
-# To load the commands with the same start
+
+# Keybinds:
 bindkey "^K" history-substring-search-up
 bindkey "^J" history-substring-search-down
 
