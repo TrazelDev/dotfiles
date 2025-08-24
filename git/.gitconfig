@@ -1,5 +1,12 @@
 [user]
 	email = nirmot327@gmail.com
-	name = TrazelDev
+	name = Nir Kriemer
+	signingkey = F8263B7E0F302D14
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[gpg]
+	program = /usr/bin/gpg
