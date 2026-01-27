@@ -81,6 +81,7 @@ alias python="python3"
 alias rcat="/bin/cat"
 alias cat='bat'
 alias vim='nvim'
+alias hx='helix'
 alias qemu='qemu-system-x86_64'
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
