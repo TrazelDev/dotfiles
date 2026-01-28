@@ -2,6 +2,8 @@
 [[language]]
 name = "cpp"
 indent = { tab-width = 4, unit = "t" }
+language-servers = [{name = "clangd", except-features=["diagnostics"]}]
 [[language]]
 name = "c"
 indent = { tab-width = 4, unit = "t" }
+language-servers = [{name = "clangd", except-features=["diagnostics"]}]
