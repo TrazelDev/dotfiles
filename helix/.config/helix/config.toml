@@ -1,4 +1,15 @@
 theme = "catppuccin_macchiato"
 
+# Making so in insert mode there is a regular cursor
 [editor.cursor-shape]
 insert = "bar"
+
+# Making it so spaces will be shown as dots and tabs as arrows
+[editor.whitespace]
+render = { space = "all", tab = "all", newline = "none" }
+[editor.whitespace.characters]
+space = "·"
+tab = "→"
+
+[editor]
+rulers = [80]
