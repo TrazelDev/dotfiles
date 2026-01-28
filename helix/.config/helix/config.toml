@@ -13,3 +13,4 @@ tab = "→"
 
 [editor]
 rulers = [80]
+line-number = "relative"
