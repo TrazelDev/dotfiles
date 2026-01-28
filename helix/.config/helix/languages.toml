@@ -1,0 +1,7 @@
+# Making it so tabs in c/cpp will be tab charcter
+[[language]]
+name = "cpp"
+indent = { tab-width = 4, unit = "t" }
+[[language]]
+name = "c"
+indent = { tab-width = 4, unit = "t" }
