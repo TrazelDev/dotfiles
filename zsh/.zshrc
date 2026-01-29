@@ -62,8 +62,8 @@ export TERM="xterm-256color"
 export COLORTERM=truecolor
 
 # Editor:
-export EDITOR='nvim'
-export VISUAL='nvim'
+export EDITOR='helix'
+export VISUAL='helix'
 
 # Plugins:
 source $HOME/.antidote/antidote.zsh
