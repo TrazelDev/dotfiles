@@ -1,5 +1,11 @@
 theme = "catppuccin_macchiato"
 
+[editor]
+rulers = [80]
+line-number = "relative"
+bufferline = "multiple"
+
+
 # Making so in insert mode there is a regular cursor
 [editor.cursor-shape]
 insert = "bar"
