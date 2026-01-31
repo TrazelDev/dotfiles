@@ -10,6 +10,7 @@ bufferline = "multiple"
 [editor.cursor-shape]
 insert = "bar"
 
+
 # Making it so spaces will be shown as dots and tabs as arrows
 [editor.whitespace]
 render = { space = "all", tab = "all", newline = "none" }
@@ -17,6 +18,6 @@ render = { space = "all", tab = "all", newline = "none" }
 space = "·"
 tab = "→"
 
-[editor]
-rulers = [80]
-line-number = "relative"
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
