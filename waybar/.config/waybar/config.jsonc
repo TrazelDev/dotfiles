@@ -2,7 +2,7 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["pulseaudio", "battery", "memory", "clock"],
+  "modules-right": ["pulseaudio", "battery", "memory", "hyprland/language", "clock"],
   "clock": {
     "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
@@ -42,5 +42,12 @@
           "default": ["", "", " "]
       },
       "on-click": "pavucontrol"
+  },
+  "hyprland/language": {
+      "format": "<span foreground='#cba6f7'>   </span>{}",
+      "format-en": "EN",
+      "format-he": "HE",
+      "format-il": "HE",
+      "on-click": "hyprctl switchxkblayout all next"
   }
 }
