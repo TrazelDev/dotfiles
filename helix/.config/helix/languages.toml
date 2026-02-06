@@ -1,9 +1,22 @@
 # Making it so tabs in c/cpp will be tab charcter
 [[language]]
 name = "cpp"
-indent = { tab-width = 4, unit = "t" }
-# language-servers = [{name = "clangd", except-features=["diagnostics"]}]
+scope = "source.cpp"
+injection-regex = "cpp"
+file-types = ["cc", "cpp", "c++", "hpp", "h"]
+language-servers = [ "clangd" ]
+auto-format = true
+indent = { tab-width = 4, unit = "\t" }
+formatter = { command = "clang-format", args = ["-style={BasedOnStyle: Google, IndentWidth: 4, TabWidth: 4, UseTab: Always, ColumnLimit: 100, Standard: Latest, AccessModifierOffset: -4}"] }
+
 [[language]]
 name = "c"
-indent = { tab-width = 4, unit = "t" }
-# language-servers = [{name = "clangd", except-features=["diagnostics"]}]
+scope = "source.c"
+injection-regex = "c"
+file-types = ["c"] # TODO: ["h"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = [ "clangd" ]
+indent = { tab-width = 4, unit = "\t" }
+formatter = { command = "clang-format", args = ["-style={BasedOnStyle: Google, IndentWidth: 4, TabWidth: 4, UseTab: Always, ColumnLimit: 100, Standard: Latest}"] }
+auto-format = true
