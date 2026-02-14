@@ -10,3 +10,6 @@
 	gpgsign = true
 [gpg]
 	program = /usr/bin/gpg
+
+[url "git@github.com:TrazelDev/"]
+	insteadOf = "TZ:"
