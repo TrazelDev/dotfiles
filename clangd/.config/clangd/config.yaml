@@ -1,0 +1,40 @@
+Diagnostics:
+  ClangTidy:
+    Add: 
+      - bugprone-*
+      - clang-analyzer-*
+      - cert-*
+      - readability-*
+      - readability-identifier-naming
+    CheckOptions:
+      # Functions
+      readability-identifier-naming.FunctionCase: camelBack
+
+      # Variables
+      readability-identifier-naming.VariableCase: camelBack
+      readability-identifier-naming.GlobalVariableCase: camelBack
+      readability-identifier-naming.LocalVariableCase: camelBack
+      readability-identifier-naming.StaticVariableCase: camelBack
+
+      # Parameters
+      readability-identifier-naming.ParameterCase: camelBack
+
+      # Struct/union/enum tags (e.g., `struct foo {}` where `foo` is the tag)
+      readability-identifier-naming.StructCase: CamelCase
+      readability-identifier-naming.UnionCase: CamelCase
+      readability-identifier-naming.EnumCase: CamelCase
+
+      # Enum constants (e.g., `FOO_BAR` in `enum x { FOO_BAR };`)
+      readability-identifier-naming.EnumConstantCase: UPPER_CASE
+
+      # Members/fields
+      readability-identifier-naming.MemberCase: camelBack
+
+      # Macros
+      readability-identifier-naming.MacroDefinitionCase: UPPER_CASE
+
+      # Typedef names (very common in C)
+      readability-identifier-naming.TypeAliasCase: CamelCase
+
+      # Constants (if clang-tidy classifies some `const` variables as constants)
+      readability-identifier-naming.ConstantCase: UPPER_CASE
