@@ -1,10 +1,12 @@
-# Making it so tabs in c/cpp will be tab charcter
+[language-server.typos]
+command = "typos-lsp"
+
 [[language]]
 name = "cpp"
 scope = "source.cpp"
 injection-regex = "cpp"
 file-types = ["cc", "cpp", "c++", "hpp", "h"]
-language-servers = [ "clangd" ]
+language-servers = [ "clangd", "typos" ]
 auto-format = true
 indent = { tab-width = 4, unit = "\t" }
 formatter = { command = "clang-format", args = ["-style={BasedOnStyle: Google, IndentWidth: 4, TabWidth: 4, UseTab: Always, ColumnLimit: 100, Standard: Latest, AccessModifierOffset: -4}"] }
@@ -13,10 +15,10 @@ formatter = { command = "clang-format", args = ["-style={BasedOnStyle: Google, I
 name = "c"
 scope = "source.c"
 injection-regex = "c"
-file-types = ["c"] # TODO: ["h"]
+file-types = ["c"]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = [ "clangd" ]
+language-servers = [ "clangd", "typos" ]
 indent = { tab-width = 4, unit = "\t" }
 formatter = { command = "clang-format", args = ["-style={BasedOnStyle: Google, IndentWidth: 4, TabWidth: 4, UseTab: Always, ColumnLimit: 100, Standard: Latest}"] }
 auto-format = true
