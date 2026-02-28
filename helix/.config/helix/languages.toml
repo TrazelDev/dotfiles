@@ -1,6 +1,13 @@
 [language-server.typos]
 command = "typos-lsp"
 
+[language-server.clangd]
+command = "clangd"
+args = [
+    "--clang-tidy",
+    "--fallback-style=none"
+]
+
 [[language]]
 name = "cpp"
 scope = "source.cpp"
@@ -9,7 +16,8 @@ file-types = ["cc", "cpp", "c++", "hpp", "h"]
 language-servers = [ "clangd", "typos" ]
 auto-format = true
 indent = { tab-width = 4, unit = "\t" }
-formatter = { command = "clang-format", args = ["-style={BasedOnStyle: Google, IndentWidth: 4, TabWidth: 4, UseTab: Always, ColumnLimit: 100, Standard: Latest, AccessModifierOffset: -4}"] }
+formatter = { command = "clang-format" }
+# args = ["-style={BasedOnStyle: Google, IndentWidth: 4, TabWidth: 4, UseTab: Always, ColumnLimit: 100, Standard: Latest, AccessModifierOffset: -4}"]
 
 [[language]]
 name = "c"
@@ -20,5 +28,6 @@ comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
 language-servers = [ "clangd", "typos" ]
 indent = { tab-width = 4, unit = "\t" }
-formatter = { command = "clang-format", args = ["-style={BasedOnStyle: Google, IndentWidth: 4, TabWidth: 4, UseTab: Always, ColumnLimit: 100, Standard: Latest}"] }
+formatter = { command = "clang-format" }
+# args = ["-style={BasedOnStyle: Google, IndentWidth: 4, TabWidth: 4, UseTab: Always, ColumnLimit: 100, Standard: Latest}"]
 auto-format = true
