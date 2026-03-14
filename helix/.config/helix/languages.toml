@@ -44,3 +44,25 @@ indent = { tab-width = 4, unit = "\t" }
 formatter = { command = "clang-format" }
 # args = ["-style={BasedOnStyle: Google, IndentWidth: 4, TabWidth: 4, UseTab: Always, ColumnLimit: 100, Standard: Latest}"]
 auto-format = true
+
+[[language]]
+name = "make"
+scope = "source.make"
+file-types = [ { glob = "Makefile" }, "mk" ]
+comment-token = "#"
+grammar = "make"
+language-servers = ["typos", "gpt"]
+
+
+# Text files:
+[[language]]
+name = "git-commit"
+language-servers = [ "typos", "gpt" ]
+[[language]]
+name = "markdown"
+language-servers = [ "typos", "gpt" ]
+[[language]]
+name = "text"
+scope = "text.plain"
+file-types = ["txt"]
+language-servers = [ "typos", "gpt" ]
