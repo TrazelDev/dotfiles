@@ -1,0 +1,17 @@
+<%
+  test_dir = `mktemp -d /tmp/c-test.XXXXXX`.strip
+  `cp -r ~/Projs/c-project-blueprint/. #{test_dir}/`
+  `rm -rf #{test_dir}/.git`
+%>
+
+
+name: ctest
+root: <%= test_dir %>
+
+windows:
+  - editor:
+      layout: even-horizontal
+      panes:
+        - hx .
+  - sh: clear
+  
