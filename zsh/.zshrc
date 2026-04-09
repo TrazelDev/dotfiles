@@ -73,6 +73,10 @@ antidote load
 bindkey "^K" history-substring-search-up
 bindkey "^J" history-substring-search-down
 
+if [ -f "$HOME/.local_defs.sh" ]; then
+  source "$HOME/.local_defs.sh"
+fi
+
 # Aliases:
 alias ls="exa"
 alias ll="exa -alh"
@@ -84,6 +88,7 @@ alias vim='nvim'
 alias hx='helix'
 alias mux='tmuxinator'
 alias qemu='qemu-system-x86_64'
+alias chronos-connect='$HOME/.config/custom_scripts/chronos_connect.sh'
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
 
