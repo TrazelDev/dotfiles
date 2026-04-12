@@ -91,6 +91,11 @@ button:hover {
     border-bottom: 2px solid @blue;
 }
 
+#network {
+    color: @teal;
+    border-bottom: 2px solid @teal;
+}
+
 #memory {
     color: @yellow;
     border-bottom: 2px solid @yellow;
