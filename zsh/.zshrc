@@ -54,8 +54,7 @@ function git_branch_name()
 # Enable substitution in the prompt.
 setopt prompt_subst
 
-PROMPT='%F{blue}%~%f $(git_branch_name)$ '
-
+PROMPT='%F{green}[%m]%f %F{blue}%~%f $(git_branch_name)$ '
 
 # Colors:
 export TERM="xterm-256color"
