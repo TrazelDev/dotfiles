@@ -1,9 +1,8 @@
 {
   "position": "top",
-  "modules-left": ["sway/workspaces"],
-  "modules-center": ["sway/window"],
-  "modules-right": ["pulseaudio", "battery", "network", "memory", "sway/language", "clock"],
-  
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["pulseaudio", "battery", "network", "memory", "hyprland/language", "clock"],
   "clock": {
     "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
@@ -44,20 +43,11 @@
       },
       "on-click": "pavucontrol"
   },
-  
-  "sway/language": {
-      "format": "<span foreground='#cba6f7'>   </span>{short}",
-      "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
-  },
-
-  "sway/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-      "ws_todoist": "",
-      "ws_obsidian": "",
-      "ws_spotify": "",
-      "ws_kde": "",
-      "ws_vm": "",
-    }
-  },
+  "hyprland/language": {
+      "format": "<span foreground='#cba6f7'>   </span>{}",
+      "format-en": "EN",
+      "format-he": "HE",
+      "format-il": "HE",
+      "on-click": "hyprctl switchxkblayout all next"
+  }
 }

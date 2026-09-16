@@ -2,7 +2,7 @@
 
 * {
     font-family: "MesloLGS Nerd Font Mono Bold";
-    font-size: 16px;
+    font-size: 24px;
     min-height: 0;
     font-weight: bold;
 }
@@ -13,17 +13,17 @@ window#waybar {
     color: @overlay0;
     transition-property: background-color;
     transition-duration: 0.1s;
-    border-bottom: 1px solid @overlay1;
+    border-bottom: 2px solid @overlay1;
 }
 
 #window {
-    margin: 8px;
-    padding-left: 8;
-    padding-right: 8;
+    margin: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 button {
-    box-shadow: inset 0 -3px transparent;
+    box-shadow: inset 0 -4px transparent;
     border: none;
     border-radius: 0;
 }
@@ -31,23 +31,23 @@ button {
 button:hover {
     background: inherit;
     color: @mauve;
-    border-top: 2px solid @mauve;
+    border-top: 3px solid @mauve;
 }
 
 #workspaces button {
-    padding: 0 4px;
+    padding: 0 6px;
 }
 
 #workspaces button.focused {
     background-color: rgba(0, 0, 0, 0.3);
     color: @rosewater;
-    border-top: 2px solid @rosewater;
+    border-top: 3px solid @rosewater;
 }
 
 #workspaces button.active {
     background-color: rgba(0, 0, 0, 0.3);
     color: @mauve;
-    border-top: 2px solid @mauve;
+    border-top: 3px solid @mauve;
 }
 
 #workspaces button.urgent {
@@ -68,41 +68,41 @@ button:hover {
 #mode,
 #scratchpad,
 #language {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 4px;
-  margin-right: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 #clock {
     color: @maroon;
-    border-bottom: 2px solid @maroon;
+    border-bottom: 3px solid @maroon;
 }
 
 #clock.date {
     color: @mauve;
-    border-bottom: 2px solid @mauve;
+    border-bottom: 3px solid @mauve;
 }
 
 #pulseaudio {
     color: @blue;
-    border-bottom: 2px solid @blue;
+    border-bottom: 3px solid @blue;
 }
 
 #network {
     color: @teal;
-    border-bottom: 2px solid @teal;
+    border-bottom: 3px solid @teal;
 }
 
 #memory {
     color: @yellow;
-    border-bottom: 2px solid @yellow;
+    border-bottom: 3px solid @yellow;
 }
 
 #idle_inhibitor {
-    margin-right: 12px;
+    margin-right: 18px;
     color: #7cb342;
 }
 
@@ -112,29 +112,42 @@ button:hover {
 
 #battery {
     color: @green;
-    border-bottom: 2px solid @green;
+    border-bottom: 3px solid @green;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
-.modules-left>widget:first-child>#workspaces {
+.modules-left > widget:first-child > #workspaces {
     margin-left: 0;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
+.modules-right > widget:last-child > #workspaces {
     margin-right: 0;
 }
 
 #custom-vpn {
     color: @lavender;
-    border-radius: 15px;
-    padding-left: 6px;
-    padding-right: 6px;
+    border-radius: 22px;
+    padding-left: 9px;
+    padding-right: 9px;
 }
-
 
 #language {
     color: @mauve;
-    border-bottom: 2px solid @mauve;
-    min-width: 16px; /* Prevents jumping when switching between EN/HE */
+    border-bottom: 3px solid @mauve;
+    min-width: 85px; /* Scaled to keep layout stable when toggling layouts */
+}
+
+/* Visually collapse the dedicated app workspaces */
+#workspaces button#sway-workspace-ws_todoist,
+#workspaces button#sway-workspace-ws_obsidian,
+#workspaces button#sway-workspace-ws_spotify,
+#workspaces button#sway-workspace-ws_vm,
+#workspaces button#sway-workspace-ws_kde {
+    padding: 0px;
+    margin: 0px;
+    min-width: 0px;
+    min-height: 0px;
+    border: none;
+    background: transparent;
 }
