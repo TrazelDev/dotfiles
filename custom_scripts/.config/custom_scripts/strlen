@@ -1,0 +1,2 @@
+#!/bin/bash
+xargs printf "%b" | wc -c
