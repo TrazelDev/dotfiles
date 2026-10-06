@@ -1,0 +1,8 @@
+# to launch things:
+WLR_BACKENDS=headless cage -- foot -e zsh -c "helix" & # actual app in this case it is just foot(helix) but we will customize it
+WAYLAND_DISPLAY=wayland-0 wayvnc 0.0.0.0 5900
+
+
+# and to watch things:
+vncviewer chronos:5900
+ssh -L 8080:127.0.0.1:8080 horikita@151.145.80.171 # launching and looking at guacamole in http://localhost:8080/guacamole/#/ 
