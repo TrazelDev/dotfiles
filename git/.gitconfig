@@ -1,3 +1,5 @@
+[core]
+	pager=delta
 [user]
 	email = nirmot327@gmail.com
 	name = Nir Kriemer
@@ -13,3 +15,6 @@
 
 [url "git@github.com:TrazelDev/"]
 	insteadOf = "TZ:"
+[delta]
+	plus-style = "syntax #012800"
+	minus-style = "syntax #340001"
