@@ -1,0 +1,17 @@
+<%
+  # 1. Grab the current working directory name and sanitize it for tmux
+  current_dir = File.basename(ENV['PWD']).gsub('.', '-')
+  
+  # 2. Use the first CLI argument as the name, fallback to current_dir if empty
+  session_name = @args[0] || current_dir
+%>
+
+name: <%= session_name %>
+root: <%= ENV['PWD'] %>
+
+windows:
+  - editor: hx .
+  - sh1: clear
+  - sh2: clear
+  - lazygit: lazygit
+  - yazi: yazi
