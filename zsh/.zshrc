@@ -94,3 +94,4 @@ eval "$(fzf --zsh)"
 
 # Path:
 export PATH=$PATH:~/snap
+export PATH=$PATH:~/.config/custom_scripts
