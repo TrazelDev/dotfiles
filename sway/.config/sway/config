@@ -50,6 +50,7 @@ exec obsidian
 exec todoist
 exec spotify-launcher
 exec kdeconnect-app
+exec safeeyes
 exec swaymsg 'workspace number 10; exec zen-browser'
 
 exec_always wl-paste --type text --watch cliphist store
