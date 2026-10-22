@@ -125,6 +125,8 @@ bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
+bindsym $mod+Control+Shift+$left move workspace to output left
+bindsym $mod+Control+Shift+$right move workspace to output right
 
 # Screenshots:
 # Screenshot desktop:
